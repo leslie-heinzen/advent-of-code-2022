@@ -27,6 +27,7 @@ pub fn solve(lines: Lines, overlap_fn: fn(a: (u32, u32), b: (u32, u32)) -> bool)
         .filter(|r| *r == true)
         .count();
 }
+
 pub fn has_total_overlap(tuple_a: (u32, u32), tuple_b: (u32, u32)) -> bool {
     let a_contains_b = tuple_a.0 >= tuple_b.0 && tuple_a.1 <= tuple_b.1;
     let b_contains_a = tuple_b.0 >= tuple_a.0 && tuple_b.1 <= tuple_a.1;
